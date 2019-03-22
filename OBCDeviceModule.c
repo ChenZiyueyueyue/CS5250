@@ -110,3 +110,7 @@ static void onebyte_exit(void)
 	unregister_chrdev(MAJOR_NUMBER, "onebyte");
 	printk(KERN_ALERT "Onebyte device module is unloaded\n");
 }
+
+MODULE_LICENSE("GPL");
+module_init(onebyte_init);
+module_exit(onebyte_exit);
